@@ -14,7 +14,7 @@ http://localhost:8080/
 Все данные, получаемые по API, упакованы в следующий объект :
 ```javascript
 {
-	"success": true/false,			- успешность обработки запроса
+    "success": true/false,			- успешность обработки запроса
     "data": JsonObject/JsonArray,	- возвращаемые данные
     "error": String/null			- Описание ошибки, в случае ее возникновения
 }
@@ -29,10 +29,10 @@ Method: **GET**
 #### Response
 ```javascript
 {
-	"success":true,
+    "success":true,
     "data":
     	{
-        	"appName":"Test Application for BCS",
+            "appName":"Test Application for BCS",
             "apiVersion":"1.0"
         },
     "error":null
@@ -48,10 +48,10 @@ Method: **GET**
 #### Response
 ```javascript
 {
-	"success":true,
+    "success":true,
     "data":
     	[
-        	{
+            {
             	"productId":"p-1q2w1",		- внешний ID продукта, используется при вызове методов API, генерируется автоматически
                 "name":"Кредит Мини",		- наименование продукта
                 "maxSum":200000.0,			- максимальная сумма
@@ -90,7 +90,7 @@ Method: **GET**
 #### Response
 ```javascript
 {
-	"success":true,
+    "success":true,
     "data":
     	[
         	{
@@ -118,15 +118,15 @@ Content-type: application/json
 RequestBody:
 ```javascript
 {
-	"salary": 60000,			- минимальный размер зарплаты заемщика
-	"isNoDebtsRule": true		- Вкл/откл правило отсутствия у заемщика текущей задолженности
+    "salary": 60000,			- минимальный размер зарплаты заемщика
+    "isNoDebtsRule": true		- Вкл/откл правило отсутствия у заемщика текущей задолженности
 }
 ```
 
 #### Response
 ```javascript
 {
-	"success":true,
+    "success":true,
     "data":null,
     "error":null
 }
@@ -141,7 +141,7 @@ Method: **DELETE**
 #### Response
 ```javascript
 {
-	"success":true,
+    "success":true,
     "data":null,
     "error":null
 }
@@ -158,30 +158,30 @@ Content-type: application/json
 RequestBody:
 ```javascript
 {
-	"claim": 100000,
-	"salary": 50000,
-	"is_debtor": true
+    "claim": 100000,
+    "salary": 50000,
+    "is_debtor": true
 }
 ```
 
 #### Response
 ```javascript
 {
-	"success":true,
+    "success":true,
     "data":
     	[
         	{
-            	"productId": "p-1q2w3",
-            	"name": "Кредит Макси",
-            	"maxSum": 5000000,
-            	"maxTerm": 3,
-            	"rate": 10.5
+            	    "productId": "p-1q2w3",
+            	    "name": "Кредит Макси",
+            	    "maxSum": 5000000,
+            	    "maxTerm": 3,
+            	    "rate": 10.5
         	},{
-            	"productId": "p-1q2w4",
-            	"name": "Кредит Безлимитный",
-            	"maxSum": 0,
-            	"maxTerm": 0,
-            	"rate": 15
+            	    "productId": "p-1q2w4",
+            	    "name": "Кредит Безлимитный",
+            	    "maxSum": 0,
+            	    "maxTerm": 0,
+            	    "rate": 15
         	}
     ],
     "error":null
