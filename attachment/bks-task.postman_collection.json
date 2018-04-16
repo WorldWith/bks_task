@@ -1,0 +1,95 @@
+{
+	"variables": [],
+	"info": {
+		"name": "bks-task",
+		"_postman_id": "ae2c21f8-3205-4c42-1738-876cc1d401e7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Общая информация о сервисе",
+			"request": {
+				"url": "http://localhost:8080/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Все продукты, которые поддерживает сервис",
+			"request": {
+				"url": "http://localhost:8080/products",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Правила применимости продукта к заемщику",
+			"request": {
+				"url": "http://localhost:8080/products/p-1q2w1/rules",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Добавляет правило к продукту",
+			"request": {
+				"url": "http://localhost:8080/products/p-1q2w1/rules",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"salary\": 60000,\n\t\"isNoDebtsRule\": true\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Удаляет правило у продукта",
+			"request": {
+				"url": "http://localhost:8080/products/p-1q2w1/rules/r-5p2g5",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Отдает продукты, применимые к переданой информации о заемщике",
+			"request": {
+				"url": "http://localhost:8080/products/apply",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"claim\": 100000,\n\t\"salary\": 50000,\n\t\"is_debtor\": true\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
